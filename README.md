@@ -14,6 +14,8 @@ Business website for **BlockFuture** — a human-first AI integration consultanc
 | `Blog.dc.html` | Latest AI News — featured post and post grid |
 | `Contact.dc.html` | Contact form |
 | `support.js` | Design Component runtime (generated — do not edit) |
+| `agentiktok/tos/` | AgentikTok Terms of Service (`/agentiktok/tos`) |
+| `agentiktok/privacy/` | AgentikTok Privacy Policy (`/agentiktok/privacy`) |
 
 ## How it works
 
