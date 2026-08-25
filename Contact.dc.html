@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@1,6..72,300..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #F7F3EC; }
+  body { font-family: 'Archivo', sans-serif; color: #16130F; -webkit-font-smoothing: antialiased; }
+  a { color: #16130F; text-decoration: none; }
+  a:hover { color: #E8501F; }
+  ::selection { background: #E8501F; color: #F7F3EC; }
+  input:focus, textarea:focus, select:focus { outline: 2px solid #E8501F; outline-offset: 0; }
+  @keyframes bf-rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</helmet>
+
+<div style="min-height: 100vh; background: #F7F3EC; overflow-x: clip;">
+
+  <nav style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px clamp(20px, 5vw, 56px); border-bottom: 1px solid #16130F; position: sticky; top: 0; background: #F7F3EC; z-index: 50;">
+    <a href="BlockFuture.dc.html" style="font-weight: 900; font-size: 20px; letter-spacing: -0.02em; font-stretch: 110%;">BlockFuture<span style="color: #E8501F;">.</span></a>
+    <div style="display: flex; align-items: center; gap: clamp(16px, 3vw, 32px);">
+      <a href="BlockFuture.dc.html#services" style="font-size: 14px; font-weight: 600;">Services</a>
+      <a href="About.dc.html" style="font-size: 14px; font-weight: 600;">About</a>
+      <a href="Blog.dc.html" style="font-size: 14px; font-weight: 600;">Latest AI News</a>
+      <a href="Contact.dc.html" style="background: #16130F; color: #F7F3EC; padding: 12px 20px; font-size: 14px; font-weight: 700; letter-spacing: 0.02em; border-radius: 999px; min-height: 44px; display: inline-flex; align-items: center;" style-hover="background: #E8501F; color: #F7F3EC;">Work with us</a>
+    </div>
+  </nav>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(40px, 6vw, 80px); padding: clamp(48px, 8vw, 110px) clamp(20px, 5vw, 56px); animation: bf-rise 0.7s ease both;">
+
+    <div>
+      <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px; color: #6B6257;">Contact</p>
+      <h1 style="font-size: clamp(44px, 8vw, 96px); line-height: 0.96; letter-spacing: -0.04em; font-weight: 900; font-stretch: 105%; margin: 0; text-wrap: balance;">Tell us about your <em style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 400; color: #E8501F;">business.</em></h1>
+      <p style="font-size: clamp(16px, 1.8vw, 19px); line-height: 1.55; max-width: 44ch; margin: clamp(24px, 4vw, 40px) 0 0; color: #3D372F;">Two minutes, five fields. A real person reads every one, and you'll hear back within a working day with honest first thoughts — even if the honest answer is "you don't need us."</p>
+      <div style="margin-top: clamp(28px, 5vw, 48px); display: flex; flex-direction: column; gap: 10px; border-top: 1px solid #16130F; padding-top: 24px;">
+        <a href="mailto:hello@blockfuture.co" style="font-weight: 700; font-size: 16px;">hello@blockfuture.co →</a>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #6B6257;">Prefer email? That works too.</span>
+      </div>
+    </div>
+
+    <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+      <div style="border: 1px solid #16130F; background: #16130F; color: #F7F3EC; padding: clamp(28px, 5vw, 48px); display: flex; flex-direction: column; gap: 16px; justify-content: center;">
+        <span style="font-size: 40px; color: #E8501F;">✓</span>
+        <h2 style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 400; font-size: clamp(26px, 3vw, 36px); margin: 0;">Got it. Thank you.</h2>
+        <p style="font-size: 15.5px; line-height: 1.55; color: #A39B8E; margin: 0; max-width: 40ch;">We'll read it carefully and reply within one working day. In the meantime, feel free to look at <a href="BlockFuture.dc.html#services" style="color: #F7F3EC; text-decoration: underline;" style-hover="color: #E8501F;">what we do</a>.</p>
+        <button onClick="{{ reset }}" style="align-self: flex-start; background: none; border: 1.5px solid #F7F3EC; color: #F7F3EC; padding: 12px 22px; border-radius: 999px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 14px; cursor: pointer; min-height: 44px;" style-hover="background: #F7F3EC; color: #16130F;">Send another</button>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ submit }}" style="border: 1px solid #16130F; background: #FDFBF7; padding: clamp(24px, 4vw, 40px); display: flex; flex-direction: column; gap: 20px;">
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <label for="bf-name" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #6B6257;">Your name</label>
+          <input id="bf-name" name="name" required="required" placeholder="Jane Rivera" style="border: 1px solid #16130F; background: #F7F3EC; padding: 14px 16px; font-family: 'Archivo', sans-serif; font-size: 16px; color: #16130F; min-height: 44px; box-sizing: border-box; width: 100%;">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <label for="bf-email" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #6B6257;">Work email</label>
+          <input id="bf-email" name="email" type="email" required="required" placeholder="jane@company.com" style="border: 1px solid #16130F; background: #F7F3EC; padding: 14px 16px; font-family: 'Archivo', sans-serif; font-size: 16px; color: #16130F; min-height: 44px; box-sizing: border-box; width: 100%;">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <label for="bf-company" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #6B6257;">Company & size</label>
+          <input id="bf-company" name="company" placeholder="Acme Logistics · 80 people" style="border: 1px solid #16130F; background: #F7F3EC; padding: 14px 16px; font-family: 'Archivo', sans-serif; font-size: 16px; color: #16130F; min-height: 44px; box-sizing: border-box; width: 100%;">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <label for="bf-interest" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #6B6257;">What are you exploring?</label>
+          <select id="bf-interest" name="interest" style="border: 1px solid #16130F; background: #F7F3EC; padding: 14px 16px; font-family: 'Archivo', sans-serif; font-size: 16px; color: #16130F; min-height: 44px; box-sizing: border-box; width: 100%;">
+            <option>End-to-end AI integration</option>
+            <option>Business consultancy</option>
+            <option>Competitor research</option>
+            <option>Managed agentic systems</option>
+            <option>Not sure yet — help me figure it out</option>
+          </select>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <label for="bf-msg" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: #6B6257;">In your own words</label>
+          <textarea id="bf-msg" name="message" rows="4" placeholder="What's eating your team's time? What would 'better' look like?" style="border: 1px solid #16130F; background: #F7F3EC; padding: 14px 16px; font-family: 'Archivo', sans-serif; font-size: 16px; color: #16130F; box-sizing: border-box; width: 100%; resize: vertical;"></textarea>
+        </div>
+        <button type="submit" style="background: #E8501F; color: #F7F3EC; border: none; padding: 16px 28px; border-radius: 999px; font-family: 'Archivo', sans-serif; font-weight: 700; font-size: 16px; cursor: pointer; min-height: 44px; align-self: flex-start;" style-hover="background: #16130F;">Send it over →</button>
+      </form>
+    </sc-if>
+  </div>
+
+  <footer style="background: #16130F; color: #A39B8E; padding: 28px clamp(20px, 5vw, 56px); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center;">
+    <a href="BlockFuture.dc.html" style="font-weight: 900; color: #F7F3EC; font-size: 16px;">BlockFuture<span style="color: #E8501F;">.</span></a>
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px;">© 2026 BlockFuture · Human-first AI integration</span>
+    <div style="display: flex; gap: 20px;">
+      <a href="About.dc.html" style="color: #A39B8E; font-size: 13px;" style-hover="color: #F7F3EC;">About</a>
+      <a href="https://www.linkedin.com" style="color: #A39B8E; font-size: 13px;" style-hover="color: #F7F3EC;">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { submitted: false };
+  renderVals() {
+    return {
+      submitted: this.state.submitted,
+      notSubmitted: !this.state.submitted,
+      submit: (e) => { e.preventDefault(); this.setState({ submitted: true }); },
+      reset: () => this.setState({ submitted: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

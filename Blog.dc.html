@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@1,6..72,300..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #F7F3EC; }
+  body { font-family: 'Archivo', sans-serif; color: #16130F; -webkit-font-smoothing: antialiased; }
+  a { color: #16130F; text-decoration: none; }
+  a:hover { color: #E8501F; }
+  ::selection { background: #E8501F; color: #F7F3EC; }
+  @keyframes bf-rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</helmet>
+
+<div style="min-height: 100vh; background: #F7F3EC; overflow-x: clip;">
+
+  <nav style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px clamp(20px, 5vw, 56px); border-bottom: 1px solid #16130F; position: sticky; top: 0; background: #F7F3EC; z-index: 50;">
+    <a href="BlockFuture.dc.html" style="font-weight: 900; font-size: 20px; letter-spacing: -0.02em; font-stretch: 110%;">BlockFuture<span style="color: #E8501F;">.</span></a>
+    <div style="display: flex; align-items: center; gap: clamp(16px, 3vw, 32px);">
+      <a href="BlockFuture.dc.html#services" style="font-size: 14px; font-weight: 600;">Services</a>
+      <a href="About.dc.html" style="font-size: 14px; font-weight: 600;">About</a>
+      <a href="Blog.dc.html" style="font-size: 14px; font-weight: 600; color: #E8501F;">Latest AI News</a>
+      <a href="Contact.dc.html" style="background: #16130F; color: #F7F3EC; padding: 12px 20px; font-size: 14px; font-weight: 700; letter-spacing: 0.02em; border-radius: 999px; min-height: 44px; display: inline-flex; align-items: center;" style-hover="background: #E8501F; color: #F7F3EC;">Work with us</a>
+    </div>
+  </nav>
+
+  <header style="padding: clamp(48px, 8vw, 100px) clamp(20px, 5vw, 56px) clamp(36px, 6vw, 64px); animation: bf-rise 0.7s ease both;">
+    <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px; color: #6B6257;">Latest AI News</p>
+    <h1 style="font-size: clamp(44px, 9vw, 120px); line-height: 0.96; letter-spacing: -0.04em; font-weight: 900; font-stretch: 105%; margin: 0; text-wrap: balance;">The signal, minus the <em style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 400; color: #E8501F;">hype.</em></h1>
+    <p style="font-size: clamp(16px, 1.8vw, 20px); line-height: 1.55; max-width: 52ch; margin: clamp(24px, 4vw, 40px) 0 0; color: #3D372F;">What's actually happening in AI, and what it means for your business — written for operators, not researchers.</p>
+  </header>
+
+  <!-- FEATURED POST -->
+  <section style="padding: 0 clamp(20px, 5vw, 56px) clamp(40px, 6vw, 64px);">
+    <a href="#" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 0; border: 1px solid #16130F; background: #16130F; color: #F7F3EC;" style-hover="color: #F7F3EC;">
+      <div style="aspect-ratio: 16 / 10; background: repeating-linear-gradient(-45deg, #2A251E, #2A251E 8px, #16130F 8px, #16130F 16px); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #3D372F;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A39B8E;">[ featured image ]</span>
+      </div>
+      <div style="padding: clamp(24px, 4vw, 48px); display: flex; flex-direction: column; gap: 16px; justify-content: center;">
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #E8501F; border: 1px solid #E8501F; padding: 5px 10px; border-radius: 999px;">Featured</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A39B8E;">Aug 2026 · 6 min</span>
+        </div>
+        <h2 style="font-size: clamp(26px, 4vw, 44px); font-weight: 900; font-stretch: 105%; letter-spacing: -0.03em; line-height: 1.05; margin: 0; text-wrap: balance;">Agentic AI is eating the back office. Here's what to automate first.</h2>
+        <p style="font-size: 15.5px; line-height: 1.55; color: #A39B8E; margin: 0; max-width: 52ch;">Placeholder summary — a practical ranking of back-office workflows by automation payoff, and the three mistakes we see mid-market teams make in month one.</p>
+        <span style="font-weight: 700; font-size: 15px; color: #E8501F;">Read the piece →</span>
+      </div>
+    </a>
+  </section>
+
+  <!-- POST GRID -->
+  <section style="padding: 0 clamp(20px, 5vw, 56px) clamp(56px, 9vw, 110px);">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: clamp(24px, 4vw, 40px);">
+      <h2 style="font-size: clamp(28px, 5vw, 56px); font-weight: 900; font-stretch: 105%; letter-spacing: -0.03em; margin: 0;">Recent posts</h2>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #6B6257;">(updated weekly)</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1px; background: #16130F; border: 1px solid #16130F;">
+      <sc-for list="{{ posts }}" as="p" hint-placeholder-count="6">
+        <a href="#" style="background: #F7F3EC; padding: clamp(24px, 4vw, 36px); display: flex; flex-direction: column; gap: 14px; min-height: 240px;" style-hover="background: #FDFBF7;">
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #E8501F;">{{ p.tag }}</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #6B6257;">{{ p.date }}</span>
+          </div>
+          <h3 style="font-size: clamp(20px, 2.5vw, 26px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; margin: 0; text-wrap: balance;">{{ p.title }}</h3>
+          <p style="font-size: 14.5px; line-height: 1.55; color: #3D372F; margin: 0; flex: 1;">{{ p.summary }}</p>
+          <span style="font-weight: 700; font-size: 14px;">Read →</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER CTA -->
+  <section style="background: #E8501F; color: #F7F3EC; padding: clamp(56px, 9vw, 110px) clamp(20px, 5vw, 56px);">
+    <h2 style="font-size: clamp(34px, 6vw, 72px); font-weight: 900; font-stretch: 105%; letter-spacing: -0.04em; line-height: 0.98; margin: 0; text-wrap: balance;">One useful email a week. <em style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 400;">No noise.</em></h2>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: clamp(28px, 5vw, 48px);">
+      <a href="Contact.dc.html" style="background: #16130F; color: #F7F3EC; padding: 16px 28px; font-weight: 700; font-size: 16px; border-radius: 999px; min-height: 44px; display: inline-flex; align-items: center;" style-hover="background: #F7F3EC; color: #16130F;">Get the newsletter →</a>
+      <p style="margin: 0; font-size: 15px; max-width: 34ch; line-height: 1.5;">The week's AI developments, translated into what they mean for your business.</p>
+    </div>
+  </section>
+
+  <footer style="background: #16130F; color: #A39B8E; padding: 28px clamp(20px, 5vw, 56px); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center;">
+    <a href="BlockFuture.dc.html" style="font-weight: 900; color: #F7F3EC; font-size: 16px;">BlockFuture<span style="color: #E8501F;">.</span></a>
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px;">© 2026 BlockFuture · Human-first AI integration</span>
+    <div style="display: flex; gap: 20px;">
+      <a href="About.dc.html" style="color: #A39B8E; font-size: 13px;" style-hover="color: #F7F3EC;">About</a>
+      <a href="Contact.dc.html" style="color: #A39B8E; font-size: 13px;" style-hover="color: #F7F3EC;">Contact</a>
+      <a href="https://www.linkedin.com" style="color: #A39B8E; font-size: 13px;" style-hover="color: #F7F3EC;">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      posts: [
+        { tag: "Playbook", date: "Aug 18", title: "The five questions to ask before buying any AI tool", summary: "Placeholder — a vendor-proof checklist that separates real capability from demo theater." },
+        { tag: "Field notes", date: "Aug 11", title: "What 60% automation actually looks like day-to-day", summary: "Placeholder — a walkthrough of a real back-office team's week, before and after." },
+        { tag: "News", date: "Aug 4", title: "This month in AI, translated for operators", summary: "Placeholder — the three announcements that matter for mid-market teams, and the ten that don't." },
+        { tag: "Opinion", date: "Jul 28", title: "Your best people are your moat. AI is the drawbridge.", summary: "Placeholder — why headcount-cut automation strategies quietly destroy the thing buyers pay for." },
+        { tag: "Playbook", date: "Jul 21", title: "Governing agents without strangling them", summary: "Placeholder — a lightweight oversight model for teams running agentic systems in production." },
+        { tag: "Field notes", date: "Jul 14", title: "The audit that talked a client out of AI", summary: "Placeholder — sometimes the honest roadmap is a spreadsheet and a process fix. A case study." }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

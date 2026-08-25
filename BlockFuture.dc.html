@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Newsreader:ital,opsz,wght@1,6..72,300..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: #F7F3EC; }
+  body { font-family: 'Archivo', sans-serif; color: #16130F; -webkit-font-smoothing: antialiased; }
+  a { color: #16130F; text-decoration: none; }
+  a:hover { color: #E8501F; }
+  ::selection { background: #E8501F; color: #F7F3EC; }
+  @keyframes bf-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes bf-rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes bf-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.15; } }
+</style>
+</helmet>
+
+<div style="min-height: 100vh; background: #F7F3EC; overflow-x: clip;">
+
+  <!-- NAV -->
+  <nav style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px clamp(20px, 5vw, 56px); border-bottom: 1px solid #16130F; position: sticky; top: 0; background: #F7F3EC; z-index: 50;">
+    <a href="#top" style="font-weight: 900; font-size: 20px; letter-spacing: -0.02em; font-stretch: 110%;">BlockFuture<span style="color: #E8501F;">.</span></a>
+    <div style="display: flex; align-items: center; gap: clamp(16px, 3vw, 32px);">
+      <a href="#services" style="font-size: 14px; font-weight: 600;">Services</a>
+      <a href="About.dc.html" style="font-size: 14px; font-weight: 600;">About</a>
+      <a href="Blog.dc.html" style="font-size: 14px; font-weight: 600;">Latest AI News</a>
+      <a href="Contact.dc.html" style="background: #16130F; color: #F7F3EC; padding: 12px 20px; font-size: 14px; font-weight: 700; letter-spacing: 0.02em; border-radius: 999px; min-height: 44px; display: inline-flex; align-items: center;" style-hover="background: #E8501F; color: #F7F3EC;">Work with us</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" style="padding: clamp(56px, 10vw, 120px) clamp(20px, 5vw, 56px) clamp(48px, 8vw, 96px); animation: bf-rise 0.7s ease both;">
+    <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px; color: #6B6257;"><span style="display: inline-block; width: 8px; height: 8px; background: #E8501F; border-radius: 50%; margin-right: 10px; animation: bf-blink 2s infinite;"></span>AI integration consultancy</p>
+    <h1 style="font-size: clamp(52px, 11vw, 148px); line-height: 0.94; letter-spacing: -0.04em; font-weight: 900; font-stretch: 105%; margin: 0; text-wrap: balance;">AI that keeps your <em style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em; color: #E8501F;">human&nbsp;soul</em> intact.</h1>
+    <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px; margin-top: clamp(32px, 6vw, 64px);">
+      <p style="font-size: clamp(17px, 2vw, 21px); line-height: 1.5; max-width: 46ch; margin: 0; color: #3D372F;">We help companies integrate AI into the way they actually work — automating the drudgery, amplifying the judgment, and never outsourcing what makes you <em style="font-family: 'Newsreader', serif;">you</em>.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+        <a href="Contact.dc.html" style="background: #E8501F; color: #F7F3EC; padding: 16px 28px; font-weight: 700; font-size: 16px; border-radius: 999px; min-height: 44px; display: inline-flex; align-items: center;" style-hover="background: #16130F; color: #F7F3EC;">Start the conversation →</a>
+        <a href="#services" style="border: 1.5px solid #16130F; padding: 16px 28px; font-weight: 700; font-size: 16px; border-radius: 999px; min-height: 44px; display: inline-flex; align-items: center;" style-hover="background: #16130F; color: #F7F3EC;">What we do</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MARQUEE -->
+  <sc-if value="{{ showMarquee }}" hint-placeholder-val="{{ true }}">
+    <div style="background: #16130F; color: #F7F3EC; overflow: hidden; padding: 14px 0; border-top: 1px solid #16130F; border-bottom: 1px solid #16130F;">
+      <div style="display: flex; width: max-content; animation: bf-marquee 22s linear infinite; white-space: nowrap;">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;">{{ marqueeText }}</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;">{{ marqueeText }}</span>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- SERVICES -->
+  <section id="services" style="padding: clamp(56px, 9vw, 110px) clamp(20px, 5vw, 56px);">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: clamp(32px, 5vw, 56px);">
+      <h2 style="font-size: clamp(34px, 6vw, 72px); font-weight: 900; font-stretch: 105%; letter-spacing: -0.03em; margin: 0;">What we do</h2>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #6B6257;">(04 practices)</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 1px; background: #16130F; border: 1px solid #16130F;">
+      <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
+        <div style="background: #F7F3EC; padding: clamp(24px, 4vw, 40px); display: flex; flex-direction: column; gap: 16px; min-height: 220px;" style-hover="background: #FDFBF7;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #E8501F;">{{ s.num }}</span>
+            <span style="font-size: 20px;">{{ s.mark }}</span>
+          </div>
+          <h3 style="font-size: clamp(22px, 3vw, 30px); font-weight: 800; letter-spacing: -0.02em; margin: 0;">{{ s.title }}</h3>
+          <p style="font-size: 15px; line-height: 1.55; color: #3D372F; margin: 0;">{{ s.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section style="background: #16130F; color: #F7F3EC; padding: clamp(64px, 11vw, 140px) clamp(20px, 5vw, 56px);">
+    <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B8E; margin: 0 0 28px;">The BlockFuture position</p>
+    <p style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 300; font-size: clamp(28px, 5.5vw, 60px); line-height: 1.25; letter-spacing: -0.01em; margin: 0; max-width: 26ch; text-wrap: pretty;">The companies that win with AI won't be the ones that replaced their people. They'll be the ones that gave their people <span style="color: #E8501F; font-weight: 400;">superpowers.</span></p>
+    <div style="display: flex; flex-wrap: wrap; gap: clamp(24px, 5vw, 64px); margin-top: clamp(40px, 7vw, 80px); border-top: 1px solid #3D372F; padding-top: 32px;">
+      <sc-for list="{{ stats }}" as="st" hint-placeholder-count="3">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <span style="font-size: clamp(36px, 5vw, 56px); font-weight: 900; font-stretch: 105%; letter-spacing: -0.03em;">{{ st.value }}</span>
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #A39B8E;">{{ st.label }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section style="padding: clamp(56px, 9vw, 110px) clamp(20px, 5vw, 56px);">
+    <h2 style="font-size: clamp(34px, 6vw, 72px); font-weight: 900; font-stretch: 105%; letter-spacing: -0.03em; margin: 0 0 clamp(32px, 5vw, 56px);">How we work</h2>
+    <div style="display: flex; flex-direction: column;">
+      <sc-for list="{{ steps }}" as="step" hint-placeholder-count="3">
+        <div style="display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: baseline; padding: clamp(24px, 4vw, 36px) 0; border-top: 1px solid #16130F;">
+          <span style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: #E8501F; min-width: 48px;">{{ step.num }}</span>
+          <h3 style="font-size: clamp(24px, 3.5vw, 36px); font-weight: 800; letter-spacing: -0.02em; margin: 0; flex: 1 1 220px;">{{ step.title }}</h3>
+          <p style="font-size: 15.5px; line-height: 1.55; color: #3D372F; margin: 0; flex: 1 1 320px; max-width: 52ch;">{{ step.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: #E8501F; color: #F7F3EC; padding: clamp(64px, 11vw, 140px) clamp(20px, 5vw, 56px);">
+    <h2 style="font-size: clamp(44px, 9vw, 110px); font-weight: 900; font-stretch: 105%; letter-spacing: -0.04em; line-height: 0.96; margin: 0; text-wrap: balance;">Let's build your <em style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 400;">unfair</em> advantage.</h2>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: clamp(32px, 6vw, 56px);">
+      <a href="Contact.dc.html" style="background: #16130F; color: #F7F3EC; padding: 18px 32px; font-weight: 700; font-size: 17px; border-radius: 999px; min-height: 44px; display: inline-flex; align-items: center;" style-hover="background: #F7F3EC; color: #16130F;">Tell us about your business →</a>
+      <p style="margin: 0; font-size: 15px; max-width: 34ch; line-height: 1.5;">Two-minute form. We'll come back within a day with honest first thoughts — no deck, no pitch.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background: #16130F; color: #A39B8E; padding: 28px clamp(20px, 5vw, 56px); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center;">
+    <span style="font-weight: 900; color: #F7F3EC; font-size: 16px;">BlockFuture<span style="color: #E8501F;">.</span></span>
+    <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px;">© 2026 BlockFuture · Human-first AI integration</span>
+    <div style="display: flex; gap: 20px;">
+      <a href="About.dc.html" style="color: #A39B8E; font-size: 13px;" style-hover="color: #F7F3EC;">About</a>
+      <a href="Blog.dc.html" style="color: #A39B8E; font-size: 13px;" style-hover="color: #F7F3EC;">Latest AI News</a>
+      <a href="Contact.dc.html" style="color: #A39B8E; font-size: 13px;" style-hover="color: #F7F3EC;">Contact</a>
+      <a href="https://www.linkedin.com" style="color: #A39B8E; font-size: 13px;" style-hover="color: #F7F3EC;">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showMarquee&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Sections&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showMarquee: this.props.showMarquee ?? true,
+      marqueeText: "Human-first AI   ✦   Automate the drudgery   ✦   Amplify the judgment   ✦   Keep the soul   ✦   ",
+      services: [
+        { num: "01", mark: "✦", title: "End-to-end AI integrations", desc: "From audit to shipped system — we design, build, and wire AI into the way your company actually works. You keep the keys." },
+        { num: "02", mark: "◈", title: "Business consultancy", desc: "Strategy that starts with your people, not the technology. We help you decide what to change, what to automate, and what to protect." },
+        { num: "03", mark: "◆", title: "Competitor research", desc: "A clear-eyed read on what your market is doing with AI — where they're ahead, where they're bluffing, and where you can leap past them." },
+        { num: "04", mark: "✷", title: "Managed agentic systems", desc: "We run and monitor the agents we build — tuned, governed, and improving month over month, with your team always in the loop." }
+      ],
+      stats: [
+        { value: "60%", label: "Avg. drudge work automated" },
+        { value: "0", label: "Roles replaced by our work" },
+        { value: "4–6 wks", label: "To first shipped integration" }
+      ],
+      steps: [
+        { num: "/01", title: "Listen first", desc: "We embed with your team for two weeks. No pre-baked playbook — we learn how your company actually works before touching a single tool." },
+        { num: "/02", title: "Ship small, fast", desc: "First working integration in weeks, not quarters. Real workflows, real users, measurable hours back." },
+        { num: "/03", title: "Hand over the keys", desc: "We train your people to own, extend, and govern every system we build. You end the engagement less dependent on us, not more." }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
