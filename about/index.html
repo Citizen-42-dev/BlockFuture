@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About — BlockFuture</title>
-<meta name="description" content="Technologists who like people. How BlockFuture approaches human-first AI integration.">
+<meta name="description" content="BlockFuture is founded and run by David Slade — ten years consulting in AI and tech, doing integration the human-first way.">
 <script src="/support.js"></script>
 </head>
 <body>
@@ -37,13 +37,13 @@
 
   <header style="padding: clamp(56px, 10vw, 120px) clamp(20px, 5vw, 56px) clamp(48px, 8vw, 96px); animation: bf-rise 0.7s ease both;">
     <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 20px; color: #6B6257;">About us</p>
-    <h1 style="font-size: clamp(44px, 9vw, 120px); line-height: 0.96; letter-spacing: -0.04em; font-weight: 900; font-stretch: 105%; margin: 0; text-wrap: balance;">Technologists who <em style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 400; color: #E8501F;">like</em> people.</h1>
-    <p style="font-size: clamp(17px, 2vw, 21px); line-height: 1.55; max-width: 56ch; margin: clamp(28px, 5vw, 48px) 0 0; color: #3D372F;">BlockFuture started with a simple frustration: watching good companies buy AI they didn't need, from people who never asked how their business actually works. We do it the other way around — we sit with your team, learn the craft behind your work, and only then bring in the technology. The result is AI that feels like it grew from inside your company, not something bolted on.</p>
+    <h1 style="font-size: clamp(44px, 9vw, 120px); line-height: 0.96; letter-spacing: -0.04em; font-weight: 900; font-stretch: 105%; margin: 0; text-wrap: balance;">A technologist who <em style="font-family: 'Newsreader', serif; font-style: italic; font-weight: 400; color: #E8501F;">likes</em> people.</h1>
+    <p style="font-size: clamp(17px, 2vw, 21px); line-height: 1.55; max-width: 56ch; margin: clamp(28px, 5vw, 48px) 0 0; color: #3D372F;">BlockFuture started with a simple frustration: watching good companies buy AI they didn't need, from people who never asked how their business actually works. I do it the other way around — I sit with your team, learn the craft behind your work, and only then bring in the technology. The result is AI that feels like it grew from inside your company, not something bolted on.</p>
   </header>
 
   <!-- VALUES -->
   <section style="background: #16130F; color: #F7F3EC; padding: clamp(56px, 9vw, 110px) clamp(20px, 5vw, 56px);">
-    <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B8E; margin: 0 0 clamp(28px, 5vw, 48px);">What we believe</p>
+    <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #A39B8E; margin: 0 0 clamp(28px, 5vw, 48px);">What I believe</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: clamp(28px, 4vw, 48px);">
       <sc-for list="{{ beliefs }}" as="b" hint-placeholder-count="3">
         <div style="display: flex; flex-direction: column; gap: 12px; border-top: 1px solid #3D372F; padding-top: 20px;">
@@ -55,25 +55,20 @@
     </div>
   </section>
 
-  <!-- TEAM -->
+  <!-- FOUNDER -->
   <section style="padding: clamp(56px, 9vw, 110px) clamp(20px, 5vw, 56px);">
     <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: clamp(32px, 5vw, 56px);">
-      <h2 style="font-size: clamp(34px, 6vw, 72px); font-weight: 900; font-stretch: 105%; letter-spacing: -0.03em; margin: 0;">The team</h2>
-      <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #6B6257;">(small on purpose)</span>
+      <h2 style="font-size: clamp(34px, 6vw, 72px); font-weight: 900; font-stretch: 105%; letter-spacing: -0.03em; margin: 0;">The founder</h2>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #6B6257;">(a team of one, on purpose)</span>
     </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: clamp(20px, 3vw, 32px);">
-      <sc-for list="{{ team }}" as="m" hint-placeholder-count="3">
-        <div style="display: flex; flex-direction: column; gap: 14px;">
-          <div style="aspect-ratio: 4 / 5; background: repeating-linear-gradient(45deg, #EAE2D4, #EAE2D4 6px, #F2ECE0 6px, #F2ECE0 12px); border: 1px solid #16130F; display: flex; align-items: center; justify-content: center;">
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #6B6257;">[ photo: {{ m.name }} ]</span>
-          </div>
-          <div>
-            <h3 style="font-size: 20px; font-weight: 800; letter-spacing: -0.02em; margin: 0;">{{ m.name }}</h3>
-            <p style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #E8501F; margin: 4px 0 8px; text-transform: uppercase; letter-spacing: 0.06em;">{{ m.role }}</p>
-            <p style="font-size: 14.5px; line-height: 1.5; color: #3D372F; margin: 0;">{{ m.bio }}</p>
-          </div>
-        </div>
-      </sc-for>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(28px, 5vw, 64px); align-items: center;">
+      <img src="/img/david-slade.jpg" alt="David Slade speaking on stage" style="width: 100%; height: auto; display: block; border: 1px solid #16130F;">
+      <div>
+        <h3 style="font-size: clamp(26px, 4vw, 40px); font-weight: 900; font-stretch: 105%; letter-spacing: -0.03em; margin: 0;">David Slade</h3>
+        <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #E8501F; margin: 8px 0 20px; text-transform: uppercase; letter-spacing: 0.08em;">Founder & Principal · 10 years in AI & tech</p>
+        <p style="font-size: clamp(15.5px, 1.8vw, 17px); line-height: 1.6; color: #3D372F; margin: 0 0 16px; max-width: 52ch;">I've spent the last ten years consulting across the AI and tech sectors — helping companies of every size turn new technology into working systems that actually ship and pay for themselves.</p>
+        <p style="font-size: clamp(15.5px, 1.8vw, 17px); line-height: 1.6; color: #3D372F; margin: 0; max-width: 52ch;">I started BlockFuture because too much of this industry sells the technology first and asks about the business later. I work the other way: embedded with your team, honest about what's worth automating, and gone once your people own the system.</p>
+      </div>
     </div>
   </section>
 
@@ -99,13 +94,8 @@ class Component extends DCLogic {
     return {
       beliefs: [
         { num: "/01", title: "People are the point.", desc: "Automation exists to give your team their judgment, creativity, and time back — not to make the org chart shorter." },
-        { num: "/02", title: "No technology for its own sake.", desc: "If a spreadsheet solves it, we'll tell you. We recommend AI only where it clearly, measurably earns its keep." },
-        { num: "/03", title: "You should own it.", desc: "Every system we build is documented, governed, and handed over. Good consultants make themselves unnecessary." }
-      ],
-      team: [
-        { name: "Founder & Principal", role: "Strategy · Integrations", bio: "Placeholder bio — two lines about background, what they've built, and why human-first AI matters to them." },
-        { name: "Engineering Lead", role: "Agentic systems", bio: "Placeholder bio — the person who ships and runs the systems, with a track record in production automation." },
-        { name: "Research Lead", role: "Market & competitor research", bio: "Placeholder bio — the analyst who reads your market cold and tells you the truth about it." }
+        { num: "/02", title: "No technology for its own sake.", desc: "If a spreadsheet solves it, I'll tell you. I recommend AI only where it clearly, measurably earns its keep." },
+        { num: "/03", title: "You should own it.", desc: "Every system I build is documented, governed, and handed over. Good consultants make themselves unnecessary." }
       ]
     };
   }
