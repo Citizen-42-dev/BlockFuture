@@ -6,16 +6,15 @@ Business website for **BlockFuture** — a human-first AI integration consultanc
 
 ## Pages
 
-| File | Page |
+| File | URL |
 |---|---|
-| `index.html` | Entry point — redirects to the homepage |
-| `BlockFuture.dc.html` | Homepage (hero, services, manifesto, process) |
-| `About.dc.html` | About — beliefs and team |
-| `Blog.dc.html` | Latest AI News — featured post and post grid |
-| `Contact.dc.html` | Contact form |
+| `index.html` | `/` — homepage (hero, services, manifesto, process) |
+| `about/index.html` | `/about/` — beliefs and team |
+| `blog/index.html` | `/blog/` — featured post and post grid |
+| `contact/index.html` | `/contact/` — contact form |
 | `support.js` | Design Component runtime (generated — do not edit) |
-| `agentiktok/tos/` | AgentikTok Terms of Service (`/agentiktok/tos`) |
-| `agentiktok/privacy/` | AgentikTok Privacy Policy (`/agentiktok/privacy`) |
+| `agentiktok/tos/` | `/agentiktok/tos` — AgentikTok Terms of Service |
+| `agentiktok/privacy/` | `/agentiktok/privacy` — AgentikTok Privacy Policy |
 
 ## How it works
 
